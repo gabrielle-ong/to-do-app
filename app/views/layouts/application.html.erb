@@ -9,10 +9,39 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
 <body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/todo_lists">
+                ToDos
+                </a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><%= link_to "About", landing_pages_path %></li>
+            </ul>
+            
+            <ul class="nav navbar-nav navbar-right">
+            <% unless user_signed_in? %>
+                <li class="<%= "active" if current_page?("/users/sign_up") %>">
+                    <%= link_to "Register", new_user_registration_path %>
+                </li>
 
-<div class="container">
-    <%= yield %>
-</div>
+                <li class="<%= "active" if current_page?("/users/sign_in") %>">
+                  <%= link_to "Log in", new_user_session_path %>
+                </li>
+             <% end %>
+
+            <% if user_signed_in? %>
+                <li class="navbar-text">Signed in as <%= current_user.email %></li>
+                <li><%= link_to "Log out", destroy_user_session_path, method: :delete %>
+            <% end %>
+        </ul>
+      </div>
+    </nav>
+    
+    <div class="container">
+        <%= yield %>
+    </div>
 
 </body>
 </html>

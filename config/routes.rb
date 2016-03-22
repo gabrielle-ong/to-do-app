@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
     resources :todo_lists do
         resources :todo_items do
             member do
@@ -7,7 +8,7 @@ Rails.application.routes.draw do
         end
     end
     
-    root "todo_lists#index" 
-    #makes localhost:3000 page the index page of todo_lists
+    get "/", to: "landing_pages#index"
+    resources :landing_pages, only: [:index]
   
 end
