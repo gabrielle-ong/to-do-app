@@ -1,0 +1,25 @@
+<h3>Register</h3>
+
+<div class="form-container">
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <div class="error-messages">
+        <%= devise_error_messages!%>
+        </div>
+
+      <div class="field">
+          <%= f.email_field :email, autofocus: true, :placeholder => "Your Email", :class => 'form-field' %>
+      </div>
+
+      <div class="field">
+          <%= f.password_field :password, autocomplete: "off", :placeholder => "Create Password", :class => 'form-field' %>
+      </div>
+
+      <div class="field">
+        <%= f.password_field :password_confirmation, autocomplete: "off", :placeholder => "Confirm Password", :class => 'form-field' %>
+      </div>
+
+      <div class="actions">
+          <%= f.submit "Register" %>
+      </div>
+    <% end %>
+</div>

@@ -1,3 +1,22 @@
+.homepage {
+    background: white;
+    align-items: center;
+    
+    img {
+        width: 100%;
+    }
+    
+    .center {
+        margin: auto;
+    }
+    
+    #landing_buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
@@ -16,14 +35,38 @@ body {
     width: 100%;
     position: relative;
     font-family: 'Lato', sans-serif;
-   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffab05+0,fcd33f+99 */
-    background: #ffab05; /* Old browsers */
-    background: -moz-linear-gradient(-45deg,  #ffab05 0%, #fcd33f 99%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(-45deg,  #ffab05 0%,#fcd33f 99%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(135deg,  #ffab05 0%,#fcd33f 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffab05', endColorstr='#fcd33f',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff9502+0,ffd338+100 */
+background: #ff9502; /* Old browsers */
+background: -moz-linear-gradient(-45deg,  #ff9502 0%, #ffd338 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg,  #ff9502 0%,#ffd338 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg,  #ff9502 0%,#ffd338 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff9502', endColorstr='#ffd338',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
+.error-messages {
+   font-family: 'Lato', sans-serif;
+    color: $dark;
+    font-size: 1em;
+}
+.form-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(250, 250, 250, .5);
+        .field{
+            display: flex;
+        }
+        .form-field{
+            display: flex;
+            font-size: 1em;
+            text-align: center;
+            margin: 5px 0px;
+            height: 40px;
+            width: 170px;
+            border: 1px solid grey;
+            border-radius: 10px;
+        }
+}
+
 .search-text {
     margin: 5px;
 }

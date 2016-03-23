@@ -1,17 +1,17 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Todo</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
- <link href='https://fonts.googleapis.com/css?family=Lato:400,700,300' rel='stylesheet' type='text/css'> 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-</head>
-
-
-<body>
-    <h1>Welcome!</h1>
-    <%=image_tag ("todo-app-picture1.jpg")%>
-</body>
-<html>
+<div align="center" class="homepage">
+    <div>
+        <h1>The most <strong>versatile</strong>
+        <br>ToDo application</h1>
+        <br>
+        <h2>Create ToDo Lists</h2>
+        <h4>by priority, by categories, by date</h4>
+    </div>
+    <%=image_tag ("todo-app-picture3-0.jpg")%>
+    <h2>Todo Items</h2>
+    <h4>Add, Delete, Edit and Mark as Complete!</h4>   
+    <%=image_tag ("todo-app-picture4-0.jpg")%>
+    <div id="landing_buttons">
+       <a href="/users/sign_up" class="btn btn-warning" role="button">Register</a>
+       <a href="/users/sign_in" class="btn btn-success" role="button">Log In</a>
+    </div>
+</div>
