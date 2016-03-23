@@ -3,7 +3,15 @@ source 'https://rubygems.org'
 gem 'devise', "~> 3.4.1"
 gem 'pg'
 gem 'bootstrap-sass', '~> 3.3.6'
-gem 'pg_search'
+
+#for paperclip (images)
+gem "paperclip", "~> 4.3"
+gem "fog"
+gem "figaro"
+
+#for heroku
+gem 'rails_12factor', group: :production
+gem 'puma'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'

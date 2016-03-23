@@ -24,6 +24,22 @@ body {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffab05', endColorstr='#fcd33f',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 
 }
+.search-text {
+    margin: 5px;
+}
+#search-form {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+#search {
+    border: 2px solid $dark;
+    border-radius: 40px;
+    margin: 0 5px;
+    }
+.nav-center {
+    margin: 0;
+}
 
 .clearfix:before,
 .clearfix:after {
@@ -35,7 +51,7 @@ body {
     clear: both;
 }
 
-#notice {
+.notice {
     width: 50%;
     max-width: 750px;
     background: $white_opaque;

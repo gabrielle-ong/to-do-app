@@ -76,4 +76,15 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+    
+    config.paperclip_defaults = {
+    :storage => :fog,
+        :fog_directory => "gabrielle-todo-app",
+    :fog_credentials => {
+      :provider => 'AWS',
+      :region => 'us-west-2',
+      :aws_access_key_id => ENV['aws_key'],
+      :aws_secret_access_key => ENV['aws_secret']
+    }
+  }
 end

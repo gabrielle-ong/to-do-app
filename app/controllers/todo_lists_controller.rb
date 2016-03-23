@@ -8,6 +8,7 @@ class TodoListsController < ApplicationController
   def index
       @todo_lists = current_user.todo_lists.all
   end
+    
 
   # GET /todo_lists/1
   # GET /todo_lists/1.json
