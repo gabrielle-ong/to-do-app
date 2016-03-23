@@ -1,8 +1,6 @@
 class TodoListsController < ApplicationController
     before_action :set_todo_list, only: [:show, :edit, :update, :destroy]
-    before_action :authenticate_user! do
-        flash[:error] = "Thou shall not pass. Pray login"
-    end
+    before_filter :authenticate_user!
 
 
   # GET /todo_lists
@@ -14,6 +12,7 @@ class TodoListsController < ApplicationController
   # GET /todo_lists/1
   # GET /todo_lists/1.json
   def show
+      @todo_item = @todo_list.todo_items.new
   end
 
   # GET /todo_lists/new

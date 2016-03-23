@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+<h2 class="todo_list_title"> <%= @todo_list.title %></h2>
+<p class="todo_list_sub_title"><%= @todo_list.description %></p>
+
+<div id="todo_items_wrapper">
+    <%= render @todo_list.todo_items %>
+</div>    
+<br>
+<h3 class="todo_list_title">Edit Todo Item</h3>    
+    <div id="form">
+        <%= render 'todo_items/form' %>
+    </div>
+<div class="links">
+    <%= link_to 'Cancel', todo_lists_path %>
+</div>
+

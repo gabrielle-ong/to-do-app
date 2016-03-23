@@ -1,12 +1,15 @@
-<div class="row clearfix">
+<% unless todo_item.id.blank? %>
+  <div class="row clearfix">
+   <% puts todo_item.id %>
+    <% puts todo_item.content %>
     <% if todo_item.completed? %>
         <div class="complete">
             <%= link_to complete_todo_list_todo_item_path(@todo_list, todo_item.id), method: :patch do %>
                 <i style="opacity: 0.4;" class="fa fa-check"></i>
             <% end %>
         </div>
-        <div class="todo_item">
-            <p style="opacity: 0.4;"><strike><%= todo_item.content %></strike></p>
+        <div class="todo_item" style="width:80%">
+            <p style="opacity: 0.4"><strike><%= todo_item.content %></strike></p>
         </div>  
         <div class="trash">
             <%= link_to todo_list_todo_item_path(@todo_list, todo_item.id), method: :delete, data: {confirm: "Are you sure?"} do %>
@@ -21,11 +24,23 @@
         </div>
         <div class="todo_item">
             <p><%= todo_item.content %></p>
-        </div>  
+        </div> 
+        <div class="edit_todo_task">
+            <%= link_to edit_todo_list_todo_item_path(@todo_list, todo_item.id), method: :get do %>
+                <i class="fa fa-pencil"></i>
+            <% end %>
+        </div>         
         <div class="trash">
             <%= link_to todo_list_todo_item_path(@todo_list, todo_item.id), method: :delete, data: {confirm: "Are you sure?"} do %>
                 <i class="fa fa-trash"></i>
             <% end %>
         </div>
-    <% end %>    
+    <% end %>  
+    <script type="text/javascript">
+        $.ajax({
+            url: '/todo_lists/:todo_list_id/todo_items/11'
+        })
+        .done
+    </script>
 </div>
+<% end %>
